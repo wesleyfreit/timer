@@ -13,6 +13,12 @@ export const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 700px) or (max-height: 700px) {
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    max-width: 100%;
+  }
   @media (max-width: 500px) {
     padding: 1rem;
   }
