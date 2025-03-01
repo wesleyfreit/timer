@@ -10,13 +10,13 @@ import { HomeContainer, StartCountDownButton, StopCountDownButton } from './styl
 const newCycleSchema = z.object({
   task: z
     .string({ required_error: 'O nome da tarefa precisa ser preenchido' })
-    .min(1, 'Informe a tarefa'),
+    .min(1, 'Informe o nome da tarefa'),
   minutesAmount: z
     .number({
-      invalid_type_error: 'O valor do cliclo precisa ser preenchido',
+      invalid_type_error: 'O valor do ciclo precisa ser preenchido',
     })
-    .min(5, 'O ciclo precisa ser de no mínimo 5 minutos')
-    .max(60, 'O ciclo precisa ser de no máximo 60 minutos'),
+    .min(5, 'O ciclo precisa ter no mínimo 5 minutos')
+    .max(60, 'O ciclo precisa ter no máximo 60 minutos'),
 });
 
 export type NewCycleFormData = z.infer<typeof newCycleSchema>;
