@@ -34,7 +34,6 @@ export function CountDown() {
         if (secondsDifference >= totalSeconds) {
           markCurrentCycleAsFinished();
           setSecondsPassed(0);
-          document.title = 'Timer';
 
           alert('O ciclo concluído!');
 

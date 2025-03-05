@@ -55,6 +55,7 @@ export function CyclesProvider({ children }: { children: ReactNode }) {
 
   function markCurrentCycleAsFinished() {
     dispatch(markCurrentCycleAsFinishedAction());
+    document.title = 'Timer';
   }
 
   function createNewCycle(data: CreateNewCycleData) {
@@ -69,6 +70,7 @@ export function CyclesProvider({ children }: { children: ReactNode }) {
 
   function interruptCurrentCycle() {
     dispatch(interruptCurrentCycleAction());
+    document.title = 'Timer';
   }
 
   return (
